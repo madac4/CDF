@@ -1,0 +1,92 @@
+.footer {
+    background-color: $bluecolor;
+    padding: 80px 0;
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        @media (max-width: $md2+px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 60px;
+        }
+    }
+    &-column {
+        h6 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        &.footer-about {
+            max-width: 400px;
+            @media (max-width: $md1+px) {
+                max-width: 350px;
+            }
+            .footer-about__logo {
+                margin-bottom: 30px;
+                a {
+                    img {
+                        width: 380px;
+                        height: 80px;
+                        @media (max-width: $md1+px) {
+                            max-width: 320px;
+                            height: 60px;
+                        }
+                    }
+                }
+            }
+            p {
+                color: #fff;
+                line-height: 150%;
+            }
+        }
+
+        &.footer-menu {
+            .footer-menu__list {
+                .footer-menu__item {
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                    a {
+                        font-weight: 500;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        &.footer-contacts {
+            max-width: 265px;
+            p {
+                color: #ffffff;
+                margin-bottom: 10px;
+            }
+            address {
+                color: #ffffff;
+                margin-bottom: 10px;
+            }
+            a {
+                color: #ffffff;
+                margin-bottom: 10px;
+                display: block;
+            }
+        }
+        &.footer-social {
+            width: 105px;
+            height: 105px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding-top: 40px;
+            @media (max-width: $md2+px) {
+                padding-top: 0;
+            }
+            a {
+                display: block;
+                img {
+                }
+            }
+        }
+    }
+}

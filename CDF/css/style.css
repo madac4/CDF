@@ -121,15 +121,142 @@ button {
   cursor: pointer;
 }
 
+.page-title {
+  height: 295px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-title h1 {
+  font-size: 52px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+.footer {
+  background-color: #0093c1;
+  padding: 80px 0;
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-column h6 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer-column.footer-about {
+  max-width: 400px;
+}
+
+.footer-column.footer-about .footer-about__logo {
+  margin-bottom: 30px;
+}
+
+.footer-column.footer-about .footer-about__logo a img {
+  width: 380px;
+  height: 80px;
+}
+
+.footer-column.footer-about p {
+  color: #fff;
+  line-height: 150%;
+}
+
+.footer-column.footer-menu .footer-menu__list .footer-menu__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-column.footer-menu .footer-menu__list .footer-menu__item a {
+  font-weight: 500;
+  color: #fff;
+}
+
+.footer-column.footer-contacts {
+  max-width: 265px;
+}
+
+.footer-column.footer-contacts p {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer-column.footer-contacts address {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer-column.footer-contacts a {
+  color: #ffffff;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer-column.footer-social {
+  width: 105px;
+  height: 105px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 40px;
+}
+
+.footer-column.footer-social a {
+  display: block;
+}
+
 @media (max-width: 1122px) {
   .container {
     max-width: 970px;
+  }
+
+  .footer-column.footer-about {
+    max-width: 350px;
+  }
+
+  .footer-column.footer-about .footer-about__logo a img {
+    max-width: 320px;
+    height: 60px;
   }
 }
 
 @media (max-width: 992.98px) {
   .container {
     max-width: 750px;
+  }
+
+  .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .footer-column.footer-social {
+    padding-top: 0;
   }
 }
 
