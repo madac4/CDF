@@ -17,6 +17,7 @@
                 display: flex;
                 align-items: center;
                 .nav-list__item {
+                    position: relative;
                     &:not(:last-child) {
                         margin-right: 15px;
                     }
@@ -42,27 +43,60 @@
                             background-color: orange;
                         }
                     }
+                    .subnav {
+                        position: absolute;
+                        opacity: 0;
+                        visibility: hidden;
+                        &.open {
+                            opacity: 1;
+                            visibility: visible;
+                            transition: .3s;
+                            top: 120%;
+                            width: 200px;
+                            padding: 20px;
+                            background: #FFFFFF;
+                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            .subnav-item {
+                                &:not(:last-child) {
+                                    margin-bottom: 15px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
         .language {
             position: relative;
             margin-right: 10px;
-            .currnet-language {
+            &.open {
+                .language-dropdown {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+            svg {
+                transition: .3s;
+            }
+            .current-language {
+                cursor: pointer;
                 color: $darkgray;
                 font-weight: 600;
-                font-style: 18px;
                 line-height: 21px;
+                margin-bottom: 5px;
             }
             .language-dropdown {
-                display: none;
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+                transition: .3s;
                 a {
                     &:not(:last-child) {
                         padding-bottom: 10px;
                     }
-                }
-                &.open {
-                    display: block;
                 }
             }
         }

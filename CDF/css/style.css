@@ -155,6 +155,10 @@ button {
           align-items: center;
 }
 
+.header .header-body .header-nav .nav-list .nav-list__item {
+  position: relative;
+}
+
 .header .header-body .header-nav .nav-list .nav-list__item:not(:last-child) {
   margin-right: 15px;
 }
@@ -185,28 +189,71 @@ button {
   background-color: orange;
 }
 
+.header .header-body .header-nav .nav-list .nav-list__item .subnav {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header .header-body .header-nav .nav-list .nav-list__item .subnav.open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  top: 120%;
+  width: 200px;
+  padding: 20px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header .header-body .header-nav .nav-list .nav-list__item .subnav.open .subnav-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 .header .header-body .language {
   position: relative;
   margin-right: 10px;
 }
 
-.header .header-body .language .currnet-language {
+.header .header-body .language.open .language-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header .header-body .language.open svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.header .header-body .language svg {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.header .header-body .language .current-language {
+  cursor: pointer;
   color: #333333;
   font-weight: 600;
-  font-style: 18px;
   line-height: 21px;
+  margin-bottom: 5px;
 }
 
 .header .header-body .language .language-dropdown {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .header .header-body .language .language-dropdown a:not(:last-child) {
   padding-bottom: 10px;
-}
-
-.header .header-body .language .language-dropdown.open {
-  display: block;
 }
 
 .header .header-body .header-contacts {
