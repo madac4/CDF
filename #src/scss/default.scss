@@ -12,7 +12,8 @@ $mw: 1110;
 $md1: $mw + 12;
 $md2: 992.98;
 $md3: 767.98;
-$md4: 479.98;
+$md4: 640;
+$md5: 479.98;
 // CONTAINER
 
 // Global Commands
@@ -81,5 +82,7 @@ a:active {
 button {
     outline: none;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 // Global Commands

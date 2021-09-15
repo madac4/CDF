@@ -1,0 +1,17 @@
+h2 {
+    font-weight: bold;
+    @include adaptiv-value('font-size', 32, 24, 1);
+    line-height: 150%;
+}
+h5 {
+    @include adaptiv-value('font-size', 20, 16, 1);
+    line-height: 150%;
+    color: #000000;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #000;
+    padding: 0 15px;
+}

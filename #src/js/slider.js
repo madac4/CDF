@@ -115,3 +115,23 @@ let sliderTemplate = new Swiper('.slider', {
         el: '.swiper-scrollbar',
     }
 })
+
+if (document.querySelector('.slider-main__body')) {
+    new Swiper('.slider-main__body', {
+        effect: 'fade',
+        autoplay:{
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        observer: true,
+        observeParents: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        autoHeight: true,
+        speed: 800,
+        navigation:{
+            nextEl: '.slider-main-controls__arrows .slider-arrow__next',
+            prevEl: '.slider-main-controls__arrows .slider-arrow__prev',
+        },
+    })
+}
