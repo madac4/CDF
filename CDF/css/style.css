@@ -121,6 +121,117 @@ button {
   cursor: pointer;
 }
 
+.header .header-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 90px;
+  gap: 15px;
+}
+
+.header .header-body .header-logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.header .header-body .header-logo img {
+  width: 208px;
+  height: 174px;
+}
+
+.header .header-body .header-nav .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header-body .header-nav .nav-list .nav-list__item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.header .header-body .header-nav .nav-list .nav-list__item a {
+  font-weight: 600;
+  font-style: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.header .header-body .header-nav .nav-list .nav-list__item.active {
+  position: relative;
+}
+
+.header .header-body .header-nav .nav-list .nav-list__item.active a {
+  color: #0093c1;
+}
+
+.header .header-body .header-nav .nav-list .nav-list__item.active::after {
+  position: relative;
+  bottom: -2px;
+  left: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: orange;
+}
+
+.header .header-body .language {
+  position: relative;
+  margin-right: 10px;
+}
+
+.header .header-body .language .currnet-language {
+  color: #333333;
+  font-weight: 600;
+  font-style: 18px;
+  line-height: 21px;
+}
+
+.header .header-body .language .language-dropdown {
+  display: none;
+}
+
+.header .header-body .language .language-dropdown a:not(:last-child) {
+  padding-bottom: 10px;
+}
+
+.header .header-body .language .language-dropdown.open {
+  display: block;
+}
+
+.header .header-body .header-contacts {
+  background-color: #ffb703;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.header .header-body .header-contacts .header-contacts__tel {
+  font-family: 'Lastria';
+  font-size: 25px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+
+.header .header-body .header-contacts .header-contacts__tel a {
+  color: #FFFFFF;
+}
+
+.header .header-body .header-contacts p {
+  font-size: 13px;
+  line-height: 17px;
+  color: #FFFFFF;
+}
+
 .page-title {
   height: 295px;
   display: -webkit-box;

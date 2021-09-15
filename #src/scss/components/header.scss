@@ -1,0 +1,89 @@
+.header {
+    .header-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 90px;
+        gap: 15px;
+        .header-logo {
+            flex: 1;
+            img {
+                width: 208px;
+                height: 174px;
+            }
+        }
+        .header-nav {
+            .nav-list {
+                display: flex;
+                align-items: center;
+                .nav-list__item {
+                    &:not(:last-child) {
+                        margin-right: 15px;
+                    }
+                    a {
+                        font-weight: 600;
+                        font-style: 18px;
+                        line-height: 21px;
+                        color: $darkgray;
+                    }
+                    &.active {
+                        position: relative;
+                        a {
+                            color: $bluecolor;
+                        }
+                        &::after {
+                            position: relative;
+                            bottom: -2px;
+                            left: 0;
+                            content: "";
+                            display: block;
+                            height: 1px;
+                            width: 100%;
+                            background-color: orange;
+                        }
+                    }
+                }
+            }
+        }
+        .language {
+            position: relative;
+            margin-right: 10px;
+            .currnet-language {
+                color: $darkgray;
+                font-weight: 600;
+                font-style: 18px;
+                line-height: 21px;
+            }
+            .language-dropdown {
+                display: none;
+                a {
+                    &:not(:last-child) {
+                        padding-bottom: 10px;
+                    }
+                }
+                &.open {
+                    display: block;
+                }
+            }
+        }
+        .header-contacts {
+            background-color: $orangecolor;
+            padding: 5px 15px;
+            border-radius: 5px;
+            .header-contacts__tel {
+                font-family: 'Lastria';
+                font-size: 25px;
+                line-height: 32px;
+                color: #FFFFFF;
+                a {
+                    color: #FFFFFF;
+                }
+            }
+            p {
+                font-size: 13px;
+                line-height: 17px;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
