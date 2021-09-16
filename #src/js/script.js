@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 @@include('slider.js');
-=======
 if (document.querySelector('.header')) {
     const languageToggler = document.querySelector('.language')
     const languageDropdown = document.querySelector('.language-dropdown')
@@ -18,4 +16,3 @@ if (document.querySelector('.header')) {
         languageToggler.classList.toggle('open')
     })
 }
->>>>>>> d3a18abe3972075728e28721287703c597dd4081
