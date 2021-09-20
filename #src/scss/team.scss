@@ -1,0 +1,100 @@
+.team {
+    @include adaptiv-value('margin-bottom', 80, 40, 1);
+    &-member {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        @media (max-width: $md2+px) {
+            flex-direction: column;
+            max-width: 70%;
+            margin: 0 auto;
+        }
+        @media (max-width: $md3+px) {
+            max-width: 100%;
+        }
+        &:not(:last-child) {
+            margin-bottom: 30px;
+            @media (max-width: $md2+px) {
+                margin-bottom: 50px;
+            }
+        }
+        &:nth-child(2n) {
+            flex-direction: row-reverse;
+            @media (max-width: $md2+px) {
+                flex-direction: column;
+            }
+        }
+        &__image {
+            position: relative;
+            width: 100%;
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-color: #000;
+                opacity: 0;
+                transition: opacity 0.3s, visibility 0.3s;
+                opacity: 0;
+                visibility: hidden;
+            }
+            img {
+                width: 100%;
+            }
+            &:hover {
+                &::after {
+                    opacity: 0.6;
+                    visibility: visible;
+                }
+                .member-social {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            .member-social {
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s, visibility 0.3s;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 3;
+                display: flex;
+                @media (max-width: $md2+px) {
+                    max-width: 100%;
+                }
+                a {
+                    display: block;
+                    transition: 0.3s;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                    &:not(:last-child) {
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+        &__info {
+            width: 100%;
+            h2 {
+                font-size: 30px;
+                color: #333333;
+            }
+            h6 {
+                font-size: 14px;
+                font-weight: 600;
+                margin: 10px 0;
+            }
+            p {
+                font-size: 14px;
+                line-height: 150%;
+            }
+        }
+    }
+}
