@@ -1,11 +1,14 @@
 .page-title {
+    @include adaptiv-value('margin-bottom', 80, 40, 1);
     height: 295px;
     display: flex;
     align-items: center;
     justify-content: center;
     h1 {
-        font-size: 52px;
+        @include adaptiv-value('font-size', 52, 38, 1);
         line-height: 150%;
         color: #ffffff;
+        text-align: center;
+        padding: 0 15px;
     }
 }

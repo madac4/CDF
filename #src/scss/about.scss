@@ -1,0 +1,153 @@
+.about-section {
+    @include adaptiv-value('margin-bottom', 80, 40, 1);
+    &__header {
+        border-bottom: 1px solid #c4c4c4;
+        padding-bottom: 10px;
+        margin-bottom: 50px;
+        h2 {
+            text-transform: uppercase;
+        }
+    }
+    &__body {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        @media (max-width: $md2+px) {
+            flex-direction: column;
+        }
+        .about-body__video {
+            width: 100%;
+            height: 560px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media (max-width: $md4+px) {
+                height: 430px;
+            }
+            a {
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+        .about-body__content {
+            max-width: 50%;
+            @media (max-width: $md2+px) {
+                max-width: 100%;
+            }
+            p {
+                font-size: 14px;
+                line-height: 150%;
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+            small {
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 5px;
+                display: block;
+            }
+            ul {
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.activity-section {
+    @include adaptiv-value('margin-bottom', 80, 40, 1);
+    &__header {
+        border-bottom: 1px solid #c4c4c4;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        h2 {
+            text-transform: uppercase;
+        }
+    }
+    &__body {
+        padding: 60px 0;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        @media (max-width: $md2+px) {
+            flex-wrap: wrap;
+            padding: 40px 20px;
+            background: transparent !important;
+            gap: 40px;
+        }
+        .activity-body__item {
+            max-width: 255px;
+            background-color: #eeeeee;
+            padding: 0 20px;
+            padding-bottom: 50px;
+            line-height: 150%;
+            @media (max-width: $md4+px) {
+                max-width: 70%;
+            }
+            @media (max-width: $md5+px) {
+                max-width: 100%;
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 60px;
+                height: 60px;
+                transform: translateY(-20px);
+                margin-bottom: -20px;
+            }
+            h6 {
+                text-align: center;
+                margin: 25px 0;
+                font-size: 14px;
+                font-weight: 600;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.file-section {
+    @include adaptiv-value('margin-bottom', 125, 60, 1);
+    &__header {
+        border-bottom: 1px solid #c4c4c4;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+        h2 {
+            font-size: 30px;
+            color: #333333;
+        }
+    }
+
+    &__body {
+        .file-item {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            color: #000;
+            transition: color 0.3s;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            &:hover {
+                color: #0093c1;
+                svg path {
+                    fill: #0093c1;
+                }
+            }
+            svg path {
+                transition: fill 0.3s;
+            }
+        }
+    }
+}
