@@ -858,6 +858,63 @@ h5 {
   line-height: 150%;
 }
 
+.services-section {
+  margin-bottom: 150px;
+}
+
+.services-section__header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.services-section__header h2 {
+  border-bottom: 1px solid #c4c4c4;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.services-section__header p {
+  font-size: 14px;
+}
+
+.services-section__body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  grid-gap: 30px;
+}
+
+.services-section__body .services-body__item {
+  text-align: center;
+  width: 100%;
+  background: #fbfbfb;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 40px 18px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.services-section__body .services-body__item:hover {
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.services-section__body .services-body__item img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.services-section__body .services-body__item h5 {
+  font-size: 14px;
+  color: #333333;
+  line-height: 140%;
+}
+
 .header .header-body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1220,6 +1277,14 @@ h5 {
     margin-bottom: calc( 40px + 40 * ((100vw - 320px) / 790));
   }
 
+  .services-section {
+    margin-bottom: calc( 60px + 90 * ((100vw - 320px) / 790));
+  }
+
+  .services-section__header {
+    margin-bottom: calc( 30px + 20 * ((100vw - 320px) / 790));
+  }
+
   .page-title {
     margin-bottom: calc( 40px + 40 * ((100vw - 320px) / 790));
   }
@@ -1322,6 +1387,10 @@ h5 {
     max-width: 100%;
   }
 
+  .services-section__body {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .footer-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1393,6 +1462,15 @@ h5 {
   .team-member {
     max-width: 100%;
   }
+
+  .services-section__body {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .services-section__body .services-body__item {
+    width: 90%;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1438,6 +1516,10 @@ h5 {
   .activity-section__body .activity-body__item {
     max-width: 70%;
   }
+
+  .services-section__body .services-body__item {
+    width: 90%;
+  }
 }
 
 @media (max-width: 479.98px) {
@@ -1451,5 +1533,10 @@ h5 {
 
   .activity-section__body .activity-body__item {
     max-width: 100%;
+  }
+
+  .services-section__body {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
   }
 }
