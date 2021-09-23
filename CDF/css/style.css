@@ -915,6 +915,49 @@ h5 {
   line-height: 140%;
 }
 
+.violence-section {
+  margin-bottom: 80px;
+}
+
+.violence-section__header {
+  border-bottom: 1px solid #c4c4c4;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+}
+
+.violence-section__header h2 {
+  text-transform: uppercase;
+}
+
+.violence-section__body .violence-body__intro p {
+  font-size: 13px;
+  line-height: 150%;
+  color: #000;
+}
+
+.violence-section__body .violence-body__intro p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.violence-section__body .violence-body__intro span {
+  color: #f28000;
+}
+
+.violence-content {
+  margin: 80px 0 10px 0;
+}
+
+.violence-content .violence-accordion .accordion-list__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.violence-content .violence-accordion .accordion-list__item h5 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: #023047;
+}
+
 .header .header-body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1283,6 +1326,10 @@ h5 {
 
   .services-section__header {
     margin-bottom: calc( 30px + 20 * ((100vw - 320px) / 790));
+  }
+
+  .violence-section {
+    margin-bottom: calc( 40px + 40 * ((100vw - 320px) / 790));
   }
 
   .page-title {

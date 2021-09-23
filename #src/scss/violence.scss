@@ -1,0 +1,45 @@
+.violence-section {
+    @include adaptiv-value('margin-bottom', 80, 40, 1);
+    &__header {
+        border-bottom: 1px solid #c4c4c4;
+        padding-bottom: 10px;
+        margin-bottom: 50px;
+        h2 {
+            text-transform: uppercase;
+        }
+    }
+    &__body {
+        .violence-body__intro {
+            p {
+                font-size: 13px;
+                line-height: 150%;
+                color: $maincolor;
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                }
+            }
+            span {
+                color: #f28000;
+            }
+        }
+    }
+}
+
+.violence-content {
+    margin: 80px 0 10px 0;
+    .violence-accordion {
+        .accordion-list__item {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            h5 {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 150%;
+                color: #023047;
+            }
+        }
+        .accordion-block__dropdown {
+        }
+    }
+}
