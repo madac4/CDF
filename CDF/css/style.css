@@ -958,6 +958,61 @@ h5 {
   color: #023047;
 }
 
+.profession-section {
+  margin-bottom: 150px;
+}
+
+.profession-section__body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  counter-reset: geek-counter;
+}
+
+.profession-section__body .profession-section__item {
+  width: 100%;
+}
+
+.profession-section__body .profession-section__item h4 {
+  font-weight: 600;
+  padding-left: 40px;
+  color: #333333;
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s;
+  position: relative;
+}
+
+.profession-section__body .profession-section__item h4:hover {
+  color: #0093C1;
+}
+
+.profession-section__body .profession-section__item h4::before {
+  counter-increment: geek-counter;
+  content: counter(geek-counter);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 3px 11px 6px 11px;
+  border: 1px solid #828282;
+  border-radius: 50%;
+  color: #333333;
+}
+
+.profession-section__body .profession-section__item p {
+  font-size: 14px;
+  line-height: 140%;
+  color: #333333;
+  margin: 15px 0;
+}
+
+.profession-section__body .profession-section__item img {
+  width: 100%;
+}
+
 .header .header-body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1332,6 +1387,10 @@ h5 {
     margin-bottom: calc( 40px + 40 * ((100vw - 320px) / 790));
   }
 
+  .profession-section {
+    margin-bottom: calc( 60px + 90 * ((100vw - 320px) / 790));
+  }
+
   .page-title {
     margin-bottom: calc( 40px + 40 * ((100vw - 320px) / 790));
   }
@@ -1436,6 +1495,10 @@ h5 {
 
   .services-section__body {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .profession-section__body {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .footer-container {

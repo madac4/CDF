@@ -1,0 +1,46 @@
+.profession-section {
+    @include adaptiv-value('margin-bottom', 150, 60, 1);
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        counter-reset: geek-counter;
+        @media (max-width: $md2+px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .profession-section__item {
+            width: 100%;
+            h4 {
+                font-weight: 600;
+                padding-left: 40px;
+                color: #333333;
+                transition: color .3s;
+                position: relative;
+                &:hover {
+                    color: #0093C1;
+                }
+                &::before {
+                    counter-increment: geek-counter;
+                    content: counter(geek-counter);
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    padding: 3px 11px 6px 11px;
+                    border: 1px solid #828282;
+                    border-radius: 50%;
+                    color: #333333;
+                }
+            }
+            p {
+                font-size: 14px;
+                line-height: 140%;
+                color: #333333;
+                margin: 15px 0;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
