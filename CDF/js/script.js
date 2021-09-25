@@ -226,7 +226,7 @@ if (document.querySelector('.questions-list__item')) {
     }
 }
 
-if (document.querySelector('.violence-content__acordion')) {
+if (document.querySelector('.violence-accordion ')) {
     const accordionItem = document.querySelectorAll('.accordion-list__item');
     
     for (let i = 0; i < accordionItem.length; i++) {
@@ -245,3 +245,4 @@ if (document.querySelector('.violence-content__acordion')) {
           });
     }
 }
+
