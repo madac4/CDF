@@ -186,7 +186,51 @@ if (document.querySelector('.slider-partners__body')) {
         },
     },
     })
-};
+}
+
+// if (document.querySelectorAll('.slider-card__body ')) {
+//     new Swiper('.slider-card__body ', {
+//         effect: 'fade',
+//         observer: true,
+//         observeParents: true,
+//         slidesPerView: 1,
+//         spaceBetween: 0,
+//         autoHeight: true,
+//         speed: 800,
+//         navigation:{
+//             nextEl: '.slider-card-controls__arrows .slider-arrow__next',
+//             prevEl: '.slider-card-controls__arrows .slider-arrow__prev',
+//         },
+//     })
+// }
+
+const sliderCard = ()=>{
+    let sliderCard = document.querySelectorAll('.slider-partners__body')
+    let prevArrow = document.querySelectorAll('.slider-arrow-prev')
+    let nextArrow = document.querySelectorAll('.slider-arrow__next')
+    sliderCard.forEach((slider, index)=>{
+        let sliderLength = slider.children[0].children.length
+        let result = (sliderLength > 1) ? true : false
+        new Swiper('.slider-partners__body', {
+            direction: 'horizontal',
+            loop: result,
+            effect: 'fade',
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            autoHeight: true,
+            speed: 800,
+            navigation: {
+                nextEl: nextArrow[index],
+                prevEl: prevArrow[index],
+            },
+            speed: 1000,
+        }); 
+    })
+}
+
+window.addEventListener('load', sliderCard);
 if (document.querySelector('.header')) {
     const languageToggler = document.querySelector('.language')
     const languageDropdown = document.querySelector('.language-dropdown')

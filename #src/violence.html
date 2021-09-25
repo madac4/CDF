@@ -10,7 +10,7 @@
 
 <body>
 
-    <!-- @@include('components/header.html') -->
+    @@include('components/header.html')
     @@include('components/page-title.html', {title: 'Serviciile CDF', image: 'img/violence.jpg'})
 
     <div class="violence">
@@ -200,16 +200,18 @@
                 <div class="violence-header">
                     <h2>ACȚIONEAZĂ-L PE AGRESOR ÎN JUDECATĂ</h2>
                 </div> 
-                <p>
-                    Dacă îți sunt încălcate drepturile sau își este cauzat un prejudiciu (material sau moral), ai dreptul de a cere compensarea prejudiciului cauzat, adică a daunelor cauzate (pentru a înțelege mai bine terminologia juridică poți consulta un Mic dicționar juridic, la secțiunea Cunoaște-ți drepturile). Aceste daune pot fi compensate prin sume bănești (de ex. pentru costurile îngrijirilor medicale, slariul pierdut, suferințe fizice sau emoționale și în anumite cazuri prin sancționarea agresorului). Pentru a acționa pe cineva în judecată, cel mai probabil vei avea nevoie de asistența calificată a unui avocat. Dacă ai nevoie de ajutor în a găsi un avocat, poți să contactezi echipa Centrului de Drept al Femeilor.
-                </p>
                 
-                
-                    
+                <div class="violence-info__body">
+                    <p>
+                        Dacă îți sunt încălcate drepturile sau își este cauzat un prejudiciu (material sau moral), ai dreptul de a cere compensarea prejudiciului cauzat, adică a daunelor cauzate (pentru a înțelege mai bine terminologia juridică poți consulta un Mic dicționar juridic, la secțiunea Cunoaște-ți drepturile). Aceste daune pot fi compensate prin sume bănești (de ex. pentru costurile îngrijirilor medicale, slariul pierdut, suferințe fizice sau emoționale și în anumite cazuri prin sancționarea agresorului). Pentru a acționa pe cineva în judecată, cel mai probabil vei avea nevoie de asistența calificată a unui avocat. Dacă ai nevoie de ajutor în a găsi un avocat, poți să contactezi echipa Centrului de Drept al Femeilor.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
     
+    @@include('components/footer.html')
+
     <script src="js/script.js"></script>
 
 </body>
