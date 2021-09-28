@@ -9,6 +9,56 @@ h5 {
     color: #000000;
 }
 
+input,
+textarea {
+    font-family: inherit;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #999191;
+    outline: none;
+    transition: 0.3s;
+    resize: none;
+    font-size: 16px;
+    &:focus {
+        border: 1px solid #000;
+    }
+    &::placeholder {
+        font-size: 14px;
+        color: #999191;
+    }
+}
+textarea {
+    height: 100px;
+}
+
+form button {
+    font-family: inherit;
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+    padding: 18px 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: 0.3s;
+    &.primary-button {
+        background-color: #0093c1;
+        &:hover {
+            background-color: darken($color: #0093c1, $amount: 7);
+        }
+    }
+    &.secondary-button {
+        background-color: #f28000;
+        &:hover {
+            background-color: darken($color: #f28000, $amount: 5);
+        }
+    }
+}
+
 .section-title {
     text-align: center;
     margin-bottom: 50px;
@@ -49,7 +99,8 @@ h5 {
 }
 
 .projects-card {
-    max-width: 540px;
+    // max-width: 540px;
+    // width: 100%;
     padding: 30px 20px;
     background: #fbfbfb;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -80,11 +131,14 @@ h5 {
         }
         .page__card-slider {
             margin-top: 50px;
+            width: 100%;
+            max-width: 500px;
             .card-slider__body {
                 .card-slider__slider {
                     position: relative;
                     .slider-card__body {
                         .slider-card__slide {
+                            width: 100%;
                             height: 100%;
                             display: flex;
                             align-items: center;

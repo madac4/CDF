@@ -135,6 +135,89 @@ h5 {
   color: #000000;
 }
 
+input,
+textarea {
+  font-family: inherit;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #999191;
+  outline: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  resize: none;
+  font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #000;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #999191;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  font-size: 14px;
+  color: #999191;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font-size: 14px;
+  color: #999191;
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  font-size: 14px;
+  color: #999191;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 14px;
+  color: #999191;
+}
+
+textarea {
+  height: 100px;
+}
+
+form button {
+  font-family: inherit;
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+  padding: 18px 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+form button.primary-button {
+  background-color: #0093c1;
+}
+
+form button.primary-button:hover {
+  background-color: #00789d;
+}
+
+form button.secondary-button {
+  background-color: #f28000;
+}
+
+form button.secondary-button:hover {
+  background-color: #d97300;
+}
+
 .section-title {
   text-align: center;
   margin-bottom: 50px;
@@ -183,7 +266,6 @@ h5 {
 }
 
 .projects-card {
-  max-width: 540px;
   padding: 30px 20px;
   background: #fbfbfb;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -226,6 +308,8 @@ h5 {
 
 .projects-card__main .page__card-slider {
   margin-top: 50px;
+  width: 100%;
+  max-width: 500px;
 }
 
 .projects-card__main .page__card-slider .card-slider__body .card-slider__slider {
@@ -233,6 +317,7 @@ h5 {
 }
 
 .projects-card__main .page__card-slider .card-slider__body .card-slider__slider .slider-card__body .slider-card__slide {
+  width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1297,6 +1382,119 @@ h5 {
   transition: 0.3s;
 }
 
+.donation-date h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 48px;
+}
+
+.donation-date__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+
+.donation-date__body .donation-date__block {
+  max-width: 255px;
+  text-align: center;
+}
+
+.donation-date__body .donation-date__block h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.donation-date__body .donation-date__block p {
+  font-size: 14px;
+  line-height: 150%;
+}
+
+#map {
+  margin-top: -40px;
+  margin-bottom: 50px;
+}
+
+.contact {
+  margin-bottom: 150px;
+}
+
+.contact-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+
+.contact-block h4 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contact-block__form {
+  max-width: 70%;
+  width: 100%;
+  padding: 50px 90px;
+}
+
+.contact-block__form h4 {
+  color: #000;
+  text-align: left;
+}
+
+.contact-block__form form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.contact-block__form form textarea,
+.contact-block__form form button {
+  grid-column: 2 span;
+}
+
+.contact-block__info {
+  max-width: 30%;
+  width: 100%;
+  background-color: #0093c1;
+  padding: 50px 30px;
+}
+
+.contact-block__info .contact-info__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.contact-block__info .contact-info__item:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.contact-block__info .contact-info__item img {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-block__info .contact-info__item p {
+  font-size: 14px;
+  color: #fff;
+}
+
 .header .header-body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1679,6 +1877,14 @@ h5 {
     margin-bottom: calc( 60px + 90 * ((100vw - 320px) / 790));
   }
 
+  .donation-date h2 {
+    font-size: calc( 32px + 16 * ((100vw - 320px) / 790));
+  }
+
+  .contact {
+    margin-bottom: calc( 60px + 90 * ((100vw - 320px) / 790));
+  }
+
   .page-title {
     margin-bottom: calc( 40px + 40 * ((100vw - 320px) / 790));
   }
@@ -1793,6 +1999,18 @@ h5 {
     grid-template-columns: 250px 1fr;
   }
 
+  .contact-block {
+    display: block;
+  }
+
+  .contact-block__form {
+    max-width: 100%;
+  }
+
+  .contact-block__info {
+    max-width: 100%;
+  }
+
   .footer-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1882,6 +2100,17 @@ h5 {
     grid-template-columns: 1fr;
     grid-gap: 50px;
   }
+
+  .donation-date__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .contact-block__form {
+    padding: 30px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1931,6 +2160,19 @@ h5 {
   .services-section__body .services-body__item {
     width: 90%;
   }
+
+  .contact-block__form form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact-block__form form textarea,
+  .contact-block__form form button {
+    grid-column: 1 span;
+  }
+
+  .contact-block__info {
+    padding: 30px 15px;
+  }
 }
 
 @media (max-width: 479.98px) {
@@ -1959,5 +2201,9 @@ h5 {
   .materials-body .materials-main .materials-cards {
     place-items: center;
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact-block__form {
+    padding: 30px 15px;
   }
 }
