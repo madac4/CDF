@@ -220,12 +220,11 @@ const sliderCard = ()=>{
             slidesPerView: 1,
             spaceBetween: 0,
             autoHeight: true,
-            speed: 100,
+            speed: 800,
             navigation: {
                 nextEl: nextArrow[index],
                 prevEl: prevArrow[index],
             },
-            speed: 1000,
         }); 
     })
 }

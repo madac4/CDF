@@ -1,0 +1,79 @@
+.media {
+    .media-sort {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 50px;
+        @media (max-width: $md3+px) {
+            gap: 15px;
+        }
+        @media (max-width: $md4+px) {
+            flex-direction: column;
+        }
+        .media-filtre {
+            max-width: 350px;
+            width: 100%;
+            background-color: $orangecolor;
+            padding: 19px 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 29px;
+            color: #ffffff;
+            &.active {
+                background-color: #e37a05;
+            }
+        }
+    }
+
+    .media-gallery {
+        &:not(:first-child) {
+            margin-top: 30px;
+        }
+        .galerry-header {
+            border-bottom: 1px solid #c4c4c4;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            h2 {
+                text-transform: uppercase;
+            }
+        }
+        .gallery-posts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            @media (max-width: $md2+px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media (max-width: $md5+px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .gallery-post {
+                width: 100%;
+                .gallery-post__image {
+                    position: relative;
+                    img {
+                        width: 100%;
+                    }
+                }
+                p {
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 150%;
+                    margin-top: 20px;
+                    color: #333333;
+                    @media (max-width: $md2+px) {
+                        margin-top: 10px;
+                    }
+                }
+                a {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}

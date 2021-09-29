@@ -9,16 +9,18 @@
 </head>
 <body>
 
-    @@include('components/header.html')
+    <!-- @@include('components/header.html') -->
     @@include('components/page-title.html', {title: 'PROIECTE IN CURS DE DESFASURARE', image: 'img/projects-indev.jpg'})
     
-    <div class="projects-indev">
+    <div class="projects">
         <div class="container">
-            <div class="projects-indev__body">
+            <div class="projects-cards">
                 <div class="projects-card with-slider">
                     <div class="projects-card__header">
-                        <img src="img/project-sponsor1.jpg" alt="">
-                        <img src="img/project-sponsor2.jpg" alt="">
+                        <div class="card_header__images">
+                            <img src="img/project-sponsor1.jpg" alt="">
+                            <img src="img/project-sponsor2.jpg" alt="">
+                        </div>
                         <div class="card-header__info">
                             <p><b>Prioada de implementare: </b>Septembrie 2019 -  Februarie 2020 (OAK Foundation)</p>
                             <p>Ianuarie 2020 - Aprilie  2021 (Swiss Philantropy Foundation)</p>
@@ -56,7 +58,9 @@
                 </div>
                 <div class="projects-card with-slider">
                     <div class="projects-card__header">
-                        <img src="img/project-sponsor3.jpg" alt="">
+                        <div class="header-card__images">
+                            <img src="img/project-sponsor3.jpg" alt="">
+                        </div>
                         <div class="card-header__info">
                             <p><b>Prioada de implementare: </b>Septembrie 2019 -  Februarie 2020 (OAK Foundation)</p>
                             <p>Ianuarie 2020 - Aprilie  2021 (Swiss Philantropy Foundation)</p>
