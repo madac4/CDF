@@ -1687,6 +1687,10 @@ form button.secondary-button:hover {
   color: #fff;
 }
 
+.media {
+  margin-bottom: 80px;
+}
+
 .media .media-sort {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2543,6 +2547,10 @@ form button.secondary-button:hover {
 
   .contact {
     margin-bottom: calc( 60px + 90 * ((100vw - 320px) / 790));
+  }
+
+  .media {
+    margin-bottom: calc( 40px + 40 * ((100vw - 320px) / 790));
   }
 
   .activity-intro .intro-info h1 {

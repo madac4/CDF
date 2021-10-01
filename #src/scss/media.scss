@@ -1,4 +1,6 @@
 .media {
+    @include adaptiv-value('margin-bottom', 80, 40, 1);
+
     .media-sort {
         display: flex;
         justify-content: center;
