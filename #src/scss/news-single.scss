@@ -1,0 +1,97 @@
+.single-content {
+    margin-bottom: 50px;
+    h5 {
+        font-size: 20px;
+        font-family: 'Raleway';
+    }
+    h2 {
+        max-width: 690px;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 14px;
+        line-height: 150%;
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+    &__video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        margin: 20px 0;
+        @media (max-width: $md5+px) {
+            height: 250px;
+        }
+        a {
+            display: block;
+        }
+    }
+}
+
+.recomandation {
+    &-header {
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #c4c4c4;
+        h2 {
+            text-transform: uppercase;
+        }
+    }
+    &-body {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+        @media (max-width: $md1+px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (max-width: $md3+px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: $md5+px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__item {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            img {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            h4 {
+                margin-bottom: 15px;
+            }
+            p {
+                // flex: 1;
+                font-size: 14px;
+                line-height: 140%;
+                margin-bottom: 15px;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                font-weight: 500;
+                text-transform: uppercase;
+                transition: 0.3s;
+                color: #000;
+                &:hover {
+                    color: #ffb703;
+                    svg {
+                        path {
+                            fill: #ffb703;
+                        }
+                    }
+                }
+                svg {
+                    margin-left: 10px;
+                    path {
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -10,7 +10,7 @@
 
 <body>
 
-    <!-- @@include('components/header.html') -->
+    @@include('components/header.html')
     @@include('components/page-title.html', {title: 'DONEAZA', image: 'img/about-title.jpg'})
 
     <div class="donation-date">
@@ -34,7 +34,49 @@
         </div>
     </div>
 
-    <!-- @@include('components/footer.html') -->
+
+    <div class="donation-main">
+        <div class="container">
+            <form action="#" class="donation-main__form">
+                <h2>FRECVENTA DONATIILOR</h2>
+                <div class="donate-type">
+                    <p>
+                        <input type="radio" id="lunar" name="radio-group" checked>
+                        <label for="lunar">Lunara</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="singular" name="radio-group">
+                        <label for="singular">Singulara</label>
+                    </p>
+                </div>
+                <h2>Suma DONATIILOR</h2>
+                <div class="donate-type">
+                    <p>
+                        <input type="radio" id="tf" name="radio-group2" checked>
+                        <label for="tf">25$</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="sf" name="radio-group2">
+                        <label for="sf">75$</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="oh" name="radio-group2">
+                        <label for="oh">100$</label>
+                    </p>
+                    <input type="text" class="custom-donate" placeholder="Alta Suma">
+                </div>
+                <h2>datele tale</h2>
+                <input placeholder="Nume" type="text">
+                <input placeholder="Full Name" type="text">
+                <input placeholder="Phone Number" type="tel">
+                <input placeholder="E-mail" type="email">
+                <textarea placeholder="Reclamatia" name="message"></textarea>
+                <button class="primary-button">Trimite</button>
+            </form>
+        </div>
+    </div>
+
+    @@include('components/footer.html')
 
     <script src="js/script.js"></script>
 </body>

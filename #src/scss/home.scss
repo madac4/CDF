@@ -366,19 +366,6 @@
                         font-size: 16px;
                         color: #fff;
                     }
-                    .plus {
-                        span {
-                            width: 16px;
-                            height: 3px;
-                            background-color: #fff;
-                            display: block;
-                            opacity: 1;
-                            transition: transform 0.3s, opacity 0.3s;
-                            &:last-child {
-                                transform: rotate(90deg) translateX(-3px);
-                            }
-                        }
-                    }
                 }
                 .questions-content {
                     margin: 15px 0;

@@ -3,16 +3,60 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 90px;
+        padding: 0 60px;
         gap: 15px;
+        @media (max-width: 1400px) {
+            padding: 0 20px;
+        }
+        @media (max-width: $md5+px) {
+            padding: 20px;
+        }
         .header-logo {
             flex: 1;
             img {
-                width: 208px;
-                height: 174px;
+                width: 150px;
+                height: 120px;
+                object-fit: cover;
+                @media (max-width: $md5+px) {
+                    width: 120px;
+                    height: 80px;
+                }
             }
         }
         .header-nav {
+            @media (max-width: 1300px) {
+                position: fixed;
+                width: 50%;
+                height: 100%;
+                background-color: #fff;
+                z-index: 5;
+                top: 0;
+                padding: 0 30px;
+                padding-top: 150px;
+                right: -50%;
+                transition: 0.3s;
+                @media (max-width: $md3+px) {
+                    width: 80%;
+                    right: -80%;
+                }
+                @media (max-width: $md5+px) {
+                    width: 100%;
+                    right: -100%;
+                }
+                &.active {
+                    right: 0;
+                }
+                .nav-list {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 30px;
+                    &__item {
+                        a {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
             .nav-list {
                 display: flex;
                 align-items: center;
@@ -23,7 +67,6 @@
                     }
                     a {
                         font-weight: 600;
-                        font-style: 18px;
                         line-height: 21px;
                         color: $darkgray;
                     }
@@ -41,6 +84,9 @@
                             height: 1px;
                             width: 100%;
                             background-color: orange;
+                            @media (max-width: 1300px) {
+                                display: none;
+                            }
                         }
                     }
                     .subnav {
@@ -94,6 +140,7 @@
                 visibility: hidden;
                 transition: 0.3s;
                 a {
+                    color: #000;
                     &:not(:last-child) {
                         padding-bottom: 10px;
                     }
@@ -104,9 +151,13 @@
             background-color: $orangecolor;
             padding: 5px 15px;
             border-radius: 5px;
+            text-align: center;
+            @media (max-width: $md4+px) {
+                margin-top: 30px;
+            }
             .header-contacts__tel {
                 font-family: 'Lastria';
-                font-size: 25px;
+                font-size: 20px;
                 line-height: 32px;
                 color: #ffffff;
                 a {
@@ -117,6 +168,41 @@
                 font-size: 13px;
                 line-height: 17px;
                 color: #ffffff;
+            }
+        }
+        .burger {
+            display: none;
+            @media (max-width: 1300px) {
+                width: 35px;
+                height: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                position: relative;
+                z-index: 6;
+                &.active {
+                    span {
+                        position: absolute;
+                        transform: translateX(-20px);
+                        background-color: transparent;
+                        &:first-child {
+                            transform: rotate(45deg);
+                            background-color: #000;
+                        }
+                        &:last-child {
+                            transform: rotate(-45deg);
+                            background-color: #000;
+                        }
+                    }
+                }
+                span {
+                    width: 100%;
+                    background-color: #000;
+                    height: 4px;
+                    border-radius: 5px;
+                    display: block;
+                    transition: 0.3s;
+                }
             }
         }
     }

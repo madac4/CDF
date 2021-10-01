@@ -249,10 +249,12 @@ if (document.querySelector('.header')) {
 }
 
 const playBtn = document.querySelector('#play-button');
-playBtn.addEventListener('click', () =>{
-    const audio = document.getElementById("audio");
-    audio.play();
-})
+if (playBtn) {
+    playBtn.addEventListener('click', () =>{
+        const audio = document.getElementById("audio");
+        audio.play();
+    })
+}
 
 if (document.querySelector('.questions-list__item')) {
     const accordionItems = document.querySelectorAll('.questions-list__item');
@@ -294,3 +296,60 @@ if (document.querySelector('.violence-accordion ')) {
     }
 }
 
+if (document.querySelector('.raport-accordion')) {
+    const accordionItem = document.querySelectorAll('.raport-accordion');
+    
+    for (let i = 0; i < accordionItem.length; i++) {
+        accordionItem[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("open");
+            if (current.length > 0) {
+                current[0].className = current[0].className.replace(" open", "");
+            }
+            this.className += " open";
+          });
+    }
+}
+
+if (document.querySelector('.burger')) {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.header-nav');
+
+    burger.addEventListener('click', () =>{
+        burger.classList.toggle('active');
+        nav.classList.toggle('active');
+        document.body.classList.toggle('lock');
+    })
+}
+
+const headerCall = document.querySelector('.header-contacts');
+
+if (headerCall) {
+    window.addEventListener('resize', () => {
+        adaptive_function();
+    });
+
+    function adaptive_header(w, h) {
+        var navMenu = document.querySelector('.header-nav');
+        var headerContact = document.querySelector('.header-contact__block');
+
+        var result = headerCall.classList.contains('done');
+        if (w < 640) {
+            if (!result) {
+                headerCall.classList.add('done');
+                navMenu.insertBefore(headerCall, navMenu.lastChild);
+            }
+        } else {
+            if (result) {
+                headerCall.classList.remove('done');
+                headerContact.insertBefore(headerCall, headerContact.firstChild);
+            }
+        }
+    }
+
+    function adaptive_function() {
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        adaptive_header(w, h);
+    }
+    adaptive_function();
+}

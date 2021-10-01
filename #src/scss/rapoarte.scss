@@ -1,0 +1,90 @@
+.raport {
+    @include adaptiv-value('margin-bottom', 150, 60, 1);
+    &-accordion {
+        &:nth-child(2n) {
+            .raport-accordion__control {
+                background-color: rgba(0, 147, 193, 0.21);
+            }
+        }
+        &.open {
+            .plus {
+                span {
+                    &:last-child {
+                        transform: rotate(0) translateY(-3px);
+                        opacity: 0;
+                    }
+                }
+            }
+            .raport-accordion__content {
+                opacity: 1;
+                visibility: visible;
+                height: 100%;
+            }
+        }
+        &__control {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid rgba(0, 147, 193, 0.67);
+            padding: 15px 30px;
+            cursor: pointer;
+
+            .plus {
+                span {
+                    background-color: #000;
+                }
+            }
+        }
+        &__content {
+            border: 1px solid rgba(0, 147, 193, 0.67);
+            border-top: 0;
+            border-bottom: 0;
+            opacity: 0;
+            visibility: hidden;
+            height: 0;
+            &:last-child {
+                border-bottom: 1px solid rgba(0, 147, 193, 0.67);
+            }
+            .raport-item {
+                padding: 15px 0;
+                &:nth-child(2n + 2) {
+                    background-color: rgba(0, 147, 193, 0.21);
+                }
+                .raport-item__content {
+                    padding: 0 30px;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    @media (max-width: $md4+px) {
+                        flex-wrap: wrap;
+                        gap: 30px;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                &__info {
+                    p {
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                    }
+                    img {
+                        width: 285px;
+                        height: 285px;
+                        object-fit: cover;
+                    }
+                }
+                a {
+                    display: block;
+                    width: 220px;
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: bold;
+                    padding: 12px 0;
+                    color: #fff;
+                    background-color: $orangecolor;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
