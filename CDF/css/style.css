@@ -2068,10 +2068,12 @@ form button.secondary-button:hover {
   margin-right: 15px;
 }
 
-.header .header-body .header-nav .nav-list .nav-list__item a {
+.header .header-body .header-nav .nav-list .nav-list__item a,
+.header .header-body .header-nav .nav-list .nav-list__item span {
   font-weight: 600;
   line-height: 21px;
   color: #333333;
+  cursor: pointer;
 }
 
 .header .header-body .header-nav .nav-list .nav-list__item.active {
@@ -2332,8 +2334,34 @@ form button.secondary-button:hover {
     gap: 30px;
   }
 
-  .header .header-body .header-nav .nav-list__item a {
+  .header .header-body .header-nav .nav-list .nav-list__item a,
+  .header .header-body .header-nav .nav-list .nav-list__item span {
     font-size: 24px;
+  }
+
+  .header .header-body .header-nav .nav-list .nav-list__item .subnav {
+    position: relative;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  }
+
+  .header .header-body .header-nav .nav-list .nav-list__item .subnav.open {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    width: 100%;
+    padding: 20px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    height: auto;
+  }
+
+  .header .header-body .header-nav .nav-list .nav-list__item .subnav.open .subnav-item:not(:last-child) {
+    margin-bottom: 25px;
   }
 
   .header .header-body .header-nav .nav-list .nav-list__item.active::after {
